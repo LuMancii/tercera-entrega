@@ -1,0 +1,17 @@
+{% extends 'padre.html' %}
+
+
+{% block ContenidoQueCambia %}
+    <h1>AnadirCelular</h1>
+
+    <form action="{% url 'Anadir' %}" method="POST"> {% csrf_token %}
+
+
+        {{miFormulario.as_p}}
+
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+{% endblock ContenidoQueCambia %}
